@@ -91,17 +91,18 @@
 
   gtag('config', 'G-SQJMYBDKX1');
 </script>
-   <!-- Auto Link Click Tracking -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("a").forEach(link => {
-      gtag('event', 'click', {
-        event_category: 'link',
-        event_label: link.href'
+  <!-- 🔹 Auto Link Click Tracking -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          gtag('event', 'click', {
+            event_category: 'link',
+            event_label: link.href
+          });
+        });
       });
     });
-  });
-  });
 </script>
 </head>
 <body>
